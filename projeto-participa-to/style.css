@@ -1,0 +1,52 @@
+:root {
+  --color-navy: #002776;
+  --color-navy-hover: #003a9e;
+  --color-gold: #ffd700;
+  --color-gold-dark: #e6c200;
+  --color-open: #16a34a;
+  --color-closed: #dc2626;
+  --color-pending: #d97706;
+  --font-sans: "Inter", "Roboto", system-ui, sans-serif;
+  --radius-card: 12px;
+  --shadow-card: 0 2px 8px rgba(0, 39, 118, 0.08);
+  --shadow-card-hover: 0 8px 32px rgba(0, 39, 118, 0.18);
+  --transition-base: all 0.3s ease-in-out;
+}
+
+/* Header */
+.portal-header { background: var(--color-navy); color: #fff; padding: 1rem 0; border-bottom: 4px solid var(--color-gold); }
+.portal-header-inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+
+/* Hero */
+.hero-banner { background: linear-gradient(135deg, #001a5c 0%, #002776 60%, #003a9e 100%); color: #fff; padding: 3rem 0 2.5rem; position: relative; overflow: hidden; }
+.hero-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; margin: 0 0 1rem; }
+
+/* Cards */
+.consulta-card { background: #fff; border-radius: var(--radius-card); border: 1px solid #e2e8f0; box-shadow: var(--shadow-card); transition: var(--transition-base); overflow: hidden; }
+.consulta-card:hover { transform: scale(1.02); box-shadow: var(--shadow-card-hover); }
+
+/* Badge */
+.badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.7rem; font-weight: 600; }
+.badge-open { background: #dcfce7; color: #16a34a; }
+.badge-closed { background: #fee2e2; color: #dc2626; }
+.badge-pending { background: #fef3c7; color: #d97706; }
+
+/* Progress Bar */
+.progress-bar-wrap { margin-top: 0.75rem; }
+.progress-label { display: flex; justify-content: space-between; font-size: 0.7rem; color: #718096; margin-bottom: 0.3rem; }
+.progress-track { height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--color-gold), #facc15); border-radius: 3px; transition: width 0.5s ease; }
+
+/* Buttons */
+.btn-primary { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1.1rem; background: var(--color-navy); color: #fff; border: none; border-radius: 8px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: var(--transition-base); }
+.btn-primary.gold { background: var(--color-gold); color: var(--color-navy); }
+.btn-follow { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 1.1rem; background: transparent; color: #4a5568; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: var(--transition-base); }
+.btn-follow.followed { background: var(--color-gold); border-color: var(--color-gold-dark); color: var(--color-navy); }
+
+/* Grid */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 560px), 1fr)); gap: 1.25rem; }
+.main-content { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+/* Footer */
+.portal-footer { background: var(--color-navy); color: #fff; padding: 2rem 0; margin-top: 3rem; }
+.portal-footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }

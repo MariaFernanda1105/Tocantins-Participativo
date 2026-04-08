@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de Participação Social — Tocantins</title>
+  <meta name="description" content="Consultas públicas e participação cidadã do Estado do Tocantins." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Portal Header -->
+  <header class="portal-header" role="banner">
+    <div class="portal-header-inner">
+      <div class="portal-logo">
+        <div class="portal-logo-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 5h16M12 5v14" stroke="#002776" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="portal-logo-text">
+          <span class="portal-logo-title">Participa Tocantins</span>
+          <span class="portal-logo-subtitle">Portal de Participação Social</span>
+        </div>
+      </div>
+      <nav class="portal-nav" aria-label="Navegação principal">
+        <a href="#consultas">Consultas</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#acessibilidade">Acessibilidade</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar" role="complementary" aria-label="Estatísticas do portal">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <span><strong class="stat-number" id="stat-participacoes">0</strong> participações registradas</span>
+      </div>
+      <div class="stat-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-open)" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+        </svg>
+        <span><strong class="stat-number open" id="stat-abertas">0</strong> consultas abertas</span>
+      </div>
+      <div class="stat-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="2" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+        </svg>
+        <span><strong class="stat-number" id="stat-total">0</strong> consultas cadastradas</span>
+      </div>
+      <div class="stat-item stat-updated">Atualizado em <time datetime="2025-03-05">05 de mar. de 2025</time></div>
+    </div>
+  </div>
+
+  <!-- Hero Banner -->
+  <section aria-labelledby="hero-title" class="hero-banner">
+    <div class="hero-gold-bar" aria-hidden="true"></div>
+    <div class="hero-circle-1" aria-hidden="true"></div>
+    <div class="hero-circle-2" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span aria-hidden="true">★</span> Governo do Estado do Tocantins</div>
+        <h1 id="hero-title" class="hero-title">Consultas Públicas</h1>
+        <p class="hero-description">Participe das decisões que moldam o futuro do Tocantins. Sua voz importa na construção de políticas públicas mais justas e transparentes.</p>
+        <a href="#consultas" class="btn-primary gold" aria-label="Ver todas as consultas públicas abertas">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Ver Consultas Abertas
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="consultas" class="main-content">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Consultas Públicas</h2>
+        <p class="section-subtitle" id="section-subtitle"></p>
+      </div>
+      <div class="search-hint" role="search" aria-label="Campo de busca (demonstração)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        Buscar consultas…
+      </div>
+    </div>
+    <nav id="filter-bar" class="filter-bar" aria-label="Filtrar por categoria"></nav>
+    <section id="cards-grid" class="cards-grid" aria-label="Lista de consultas públicas"></section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="portal-footer" role="contentinfo">
+    <div class="portal-footer-inner">
+      <div>
+        <p class="footer-brand-name">Participa Tocantins</p>
+        <p class="footer-copy">© 2025 Governo do Estado do Tocantins. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#privacidade">Política de Privacidade</a>
+        <a href="#acessibilidade">Acessibilidade</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
